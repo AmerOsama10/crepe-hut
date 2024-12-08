@@ -61,6 +61,7 @@ public class recipes extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setIconImage(uplogo.getImage());
+        loadNewItems();
     }
 
 
@@ -175,7 +176,7 @@ public class recipes extends javax.swing.JFrame {
         labl2 = new javax.swing.JLabel();
         quantity7 = new javax.swing.JTextField();
         pizaa290 = new javax.swing.JButton();
-        size7 = new javax.swing.JComboBox<>();
+        sizePizza = new javax.swing.JComboBox<>();
         labl4 = new javax.swing.JLabel();
         pasta = new javax.swing.JPanel();
         pasta315 = new javax.swing.JButton();
@@ -188,7 +189,7 @@ public class recipes extends javax.swing.JFrame {
         pasta320 = new javax.swing.JButton();
         labl3 = new javax.swing.JLabel();
         quantity8 = new javax.swing.JTextField();
-        size9 = new javax.swing.JComboBox<>();
+        sizePasta = new javax.swing.JComboBox<>();
         labl5 = new javax.swing.JLabel();
         adds = new javax.swing.JPanel();
         quantity5 = new javax.swing.JTextField();
@@ -216,7 +217,7 @@ public class recipes extends javax.swing.JFrame {
         add180 = new javax.swing.JButton();
         add130 = new javax.swing.JButton();
         add120 = new javax.swing.JButton();
-        size8 = new javax.swing.JComboBox<>();
+        sizeAdd = new javax.swing.JComboBox<>();
         label7 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         takeaway = new javax.swing.JLabel();
@@ -949,7 +950,7 @@ public class recipes extends javax.swing.JFrame {
         cheese60.setBackground(new java.awt.Color(81, 26, 26));
         cheese60.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cheese60.setForeground(new java.awt.Color(255, 255, 255));
-        cheese60.setText("بطاطس بوم فريت");
+        cheese60.setText("بطاطس فرسكس");
         cheese60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cheese60ActionPerformed(evt);
@@ -1214,7 +1215,7 @@ public class recipes extends javax.swing.JFrame {
                     .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(209, Short.MAX_VALUE))
         );
-        loadNewItems();
+
         jTabbedPane1.addTab("   جديد   ", neew);
 
         sweet.setBackground(new java.awt.Color(21, 21, 27));
@@ -1570,8 +1571,22 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        size7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        size7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "صغير", "وسط", "كبير" }));
+        sizePizza.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        sizePizza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "صغير", "وسط", "كبير" }));
+        // Center-align the text in the combo box
+        sizePizza.setRenderer(new javax.swing.DefaultListCellRenderer() {
+            @Override
+            public java.awt.Component getListCellRendererComponent(
+                javax.swing.JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                // Use the default rendering
+                java.awt.Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                if (renderer instanceof javax.swing.JLabel) {
+                    // Center-align text
+                    ((javax.swing.JLabel) renderer).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                }
+                return renderer;
+            }
+        });
 
         labl4.setBackground(new java.awt.Color(204, 0, 0));
         labl4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1632,7 +1647,7 @@ public class recipes extends javax.swing.JFrame {
                 .addGap(30, 30, 30))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pizzaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(size7, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sizePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labl4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(97, 97, 97)
@@ -1682,7 +1697,7 @@ public class recipes extends javax.swing.JFrame {
                 .addGroup(pizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(quantity7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labl2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(size7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sizePizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labl4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(650, 650, 650))
         );
@@ -1740,6 +1755,7 @@ public class recipes extends javax.swing.JFrame {
         pasta335.setBackground(new java.awt.Color(255, 153, 0));
         pasta335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         pasta335.setForeground(new java.awt.Color(255, 255, 255));
+        pasta335.setText("مكرونه سي فود");
         pasta335.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pasta335ActionPerformed(evt);
@@ -1749,7 +1765,7 @@ public class recipes extends javax.swing.JFrame {
         pasta330.setBackground(new java.awt.Color(255, 153, 0));
         pasta330.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         pasta330.setForeground(new java.awt.Color(255, 255, 255));
-        pasta330.setText("مكرونه سي فود");
+        pasta330.setText("مكرونه جمبري");
         pasta330.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pasta330ActionPerformed(evt);
@@ -1759,7 +1775,7 @@ public class recipes extends javax.swing.JFrame {
         pasta325.setBackground(new java.awt.Color(255, 153, 0));
         pasta325.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         pasta325.setForeground(new java.awt.Color(255, 255, 255));
-        pasta325.setText("مكرونه جمبري");
+        pasta325.setText("مكرونه فراخ");
         pasta325.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pasta325ActionPerformed(evt);
@@ -1791,8 +1807,8 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        size9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        size9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "صغير", "وسط", "كبير" }));
+        sizePasta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        sizePasta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "صغير", "وسط", "كبير" }));
 
         labl5.setBackground(new java.awt.Color(204, 0, 0));
         labl5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1825,7 +1841,7 @@ public class recipes extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pastaLayout.createSequentialGroup()
                 .addGap(101, 101, 101)
-                .addComponent(size9, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sizePasta, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labl5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1859,10 +1875,25 @@ public class recipes extends javax.swing.JFrame {
                         .addComponent(quantity8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(labl3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(size9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sizePasta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(labl5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(684, 684, 684))
         );
+
+        // Center-align the text in the combo box
+        sizePasta.setRenderer(new javax.swing.DefaultListCellRenderer() {
+            @Override
+            public java.awt.Component getListCellRendererComponent(
+                javax.swing.JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                // Use the default rendering
+                java.awt.Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                if (renderer instanceof javax.swing.JLabel) {
+                    // Center-align text
+                    ((javax.swing.JLabel) renderer).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                }
+                return renderer;
+            }
+        });
 
         jTabbedPane1.addTab("   الباستا     ", pasta);
 
@@ -1907,7 +1938,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add155.setBackground(new java.awt.Color(153, 153, 153));
+        add155.setBackground(new java.awt.Color(255, 153, 153));
         add155.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add155.setForeground(new java.awt.Color(255, 255, 255));
         add155.setText("اضافه لحم مفروم");
@@ -1917,7 +1948,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add150.setBackground(new java.awt.Color(153, 153, 153));
+        add150.setBackground(new java.awt.Color(255, 153, 153));
         add150.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add150.setForeground(new java.awt.Color(255, 255, 255));
         add150.setText("اضافه سجق");
@@ -1927,7 +1958,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add170.setBackground(new java.awt.Color(153, 153, 153));
+        add170.setBackground(new java.awt.Color(255, 153, 153));
         add170.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add170.setForeground(new java.awt.Color(255, 255, 255));
         add170.setText("اضافه رومي");
@@ -1937,7 +1968,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add175.setBackground(new java.awt.Color(153, 153, 153));
+        add175.setBackground(new java.awt.Color(255, 153, 153));
         add175.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add175.setForeground(new java.awt.Color(255, 255, 255));
         add175.setText("اضافه كيري");
@@ -1947,7 +1978,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add165.setBackground(new java.awt.Color(153, 153, 153));
+        add165.setBackground(new java.awt.Color(255, 153, 153));
         add165.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add165.setForeground(new java.awt.Color(255, 255, 255));
         add165.setText("اضافه موتزريلا");
@@ -1957,7 +1988,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add160.setBackground(new java.awt.Color(153, 153, 153));
+        add160.setBackground(new java.awt.Color(255, 153, 153));
         add160.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add160.setForeground(new java.awt.Color(255, 255, 255));
         add160.setText("اضافه فراخ");
@@ -1967,7 +1998,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add140.setBackground(new java.awt.Color(153, 153, 153));
+        add140.setBackground(new java.awt.Color(255, 153, 153));
         add140.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add140.setForeground(new java.awt.Color(255, 255, 255));
         add140.setText("اضافه بسطرمه");
@@ -1977,7 +2008,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add145.setBackground(new java.awt.Color(153, 153, 153));
+        add145.setBackground(new java.awt.Color(255, 153, 153));
         add145.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add145.setForeground(new java.awt.Color(255, 255, 255));
         add145.setText("اضافه سوسيس");
@@ -2010,7 +2041,7 @@ public class recipes extends javax.swing.JFrame {
         add100.setBackground(new java.awt.Color(255, 153, 0));
         add100.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add100.setForeground(new java.awt.Color(255, 255, 255));
-        add100.setText("كول سلو");
+        add100.setText("كولسلو");
         add100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 add100ActionPerformed(evt);
@@ -2020,7 +2051,7 @@ public class recipes extends javax.swing.JFrame {
         add110.setBackground(new java.awt.Color(255, 153, 0));
         add110.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         add110.setForeground(new java.awt.Color(255, 255, 255));
-        add110.setText("باكيت بطاطس كبير");
+        add110.setText("مياه");
         add110.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 add110ActionPerformed(evt);
@@ -2068,7 +2099,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add180.setBackground(new java.awt.Color(153, 153, 153));
+        add180.setBackground(new java.awt.Color(255, 153, 153));
         add180.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add180.setForeground(new java.awt.Color(255, 255, 255));
         add180.setText("اضافه شيدر");
@@ -2098,8 +2129,8 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        size8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        size8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "صغير", "وسط", "كبير" }));
+        sizeAdd.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        sizeAdd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "صغير", "وسط", "كبير" }));
 
         label7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         label7.setForeground(new java.awt.Color(255, 255, 102));
@@ -2164,7 +2195,7 @@ public class recipes extends javax.swing.JFrame {
                         .addComponent(jScrollPane4))
                     .addGroup(addsLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
-                        .addComponent(size8, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sizeAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2216,7 +2247,7 @@ public class recipes extends javax.swing.JFrame {
                 .addGroup(addsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(quantity5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(size8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sizeAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(addsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2224,6 +2255,21 @@ public class recipes extends javax.swing.JFrame {
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
         );
+
+        // Center-align the text in the combo box
+        sizeAdd.setRenderer(new javax.swing.DefaultListCellRenderer() {
+            @Override
+            public java.awt.Component getListCellRendererComponent(
+                javax.swing.JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                // Use the default rendering
+                java.awt.Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                if (renderer instanceof javax.swing.JLabel) {
+                    // Center-align text
+                    ((javax.swing.JLabel) renderer).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                }
+                return renderer;
+            }
+        });
 
         jTabbedPane1.addTab("   الاضافات      ", adds);
 
@@ -2878,7 +2924,7 @@ public class recipes extends javax.swing.JFrame {
 
     private void chicken20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chicken20ActionPerformed
         // TODO add your handling code here:
-        itemid = 19;
+        itemid = 20;
         item_chicken(itemid);
     }//GEN-LAST:event_chicken20ActionPerformed
 
@@ -3821,7 +3867,7 @@ public class recipes extends javax.swing.JFrame {
 
     private void chicken19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chicken19ActionPerformed
         // TODO add your handling code here:
-        itemid = 18;
+        itemid = 19;
         item_chicken(itemid);
     }//GEN-LAST:event_chicken19ActionPerformed
 
@@ -3849,7 +3895,7 @@ public class recipes extends javax.swing.JFrame {
 
     private void chicken18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chicken18ActionPerformed
         // TODO add your handling code here:
-        itemid = 23;
+        itemid = 18;
         item_chicken(itemid);
     }//GEN-LAST:event_chicken18ActionPerformed
 
@@ -3913,7 +3959,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_new76ActionPerformed
 
     private void pizaa215ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa215ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -3934,7 +3980,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa215ActionPerformed
 
     private void pizaa210ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa210ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -3955,7 +4001,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa210ActionPerformed
 
     private void pizaa205ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa205ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -3976,7 +4022,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa205ActionPerformed
 
     private void pizaa200ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa200ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -3998,7 +4044,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_pizaa200ActionPerformed
 
     private void pizaa235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa235ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4019,7 +4065,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa235ActionPerformed
 
     private void pizaa230ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa230ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4040,7 +4086,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa230ActionPerformed
 
     private void pizaa225ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa225ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4062,7 +4108,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_pizaa225ActionPerformed
 
     private void pizaa220ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa220ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4084,7 +4130,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_pizaa220ActionPerformed
 
     private void pizaa255ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa255ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4105,7 +4151,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa255ActionPerformed
 
     private void pizaa250ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa250ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4126,7 +4172,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa250ActionPerformed
 
     private void pizaa245ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa245ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4147,7 +4193,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa245ActionPerformed
 
     private void pizaa240ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa240ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4168,7 +4214,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa240ActionPerformed
 
     private void pizaa275ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa275ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4189,7 +4235,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa275ActionPerformed
 
     private void pizaa270ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa270ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4210,7 +4256,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa270ActionPerformed
 
     private void pizaa265ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa265ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4231,7 +4277,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa265ActionPerformed
 
     private void pizaa260ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa260ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4252,7 +4298,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa260ActionPerformed
 
     private void pizaa295ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa295ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4273,7 +4319,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa295ActionPerformed
 
     private void pizaa285ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa285ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4294,7 +4340,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa285ActionPerformed
 
     private void pizaa280ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa280ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4319,7 +4365,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_quantity7ActionPerformed
 
     private void pizaa290ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizaa290ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePizza.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4340,7 +4386,7 @@ public class recipes extends javax.swing.JFrame {
         item_pizza(itemid);    }//GEN-LAST:event_pizaa290ActionPerformed
 
     private void pasta315ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta315ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4361,7 +4407,7 @@ public class recipes extends javax.swing.JFrame {
         item_pasta(itemid);    }//GEN-LAST:event_pasta315ActionPerformed
 
     private void pasta310ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta310ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4382,7 +4428,7 @@ public class recipes extends javax.swing.JFrame {
         item_pasta(itemid);    }//GEN-LAST:event_pasta310ActionPerformed
 
     private void pasta305ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta305ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4403,7 +4449,7 @@ public class recipes extends javax.swing.JFrame {
         item_pasta(itemid);    }//GEN-LAST:event_pasta305ActionPerformed
 
     private void pasta300ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta300ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4424,7 +4470,7 @@ public class recipes extends javax.swing.JFrame {
         item_pasta(itemid);    }//GEN-LAST:event_pasta300ActionPerformed
 
     private void pasta335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta335ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4445,7 +4491,7 @@ public class recipes extends javax.swing.JFrame {
         item_pasta(itemid);    }//GEN-LAST:event_pasta335ActionPerformed
 
     private void pasta330ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta330ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4466,7 +4512,7 @@ public class recipes extends javax.swing.JFrame {
         item_pasta(itemid);    }//GEN-LAST:event_pasta330ActionPerformed
 
     private void pasta325ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta325ActionPerformed
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4488,7 +4534,7 @@ public class recipes extends javax.swing.JFrame {
 
     private void pasta320ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasta320ActionPerformed
         // TODO add your handling code here:
-        int selectedSizeIndex = size8.getSelectedIndex();
+        int selectedSizeIndex = sizePasta.getSelectedIndex();
 
         int itemid = 0;
         switch (selectedSizeIndex) {
@@ -4514,7 +4560,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_quantity8ActionPerformed
 
     private void add135ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add135ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4535,7 +4581,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add135ActionPerformed
 
     private void add155ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add155ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4556,7 +4602,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add155ActionPerformed
 
     private void add150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add150ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4577,7 +4623,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add150ActionPerformed
 
     private void add170ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add170ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4598,7 +4644,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add170ActionPerformed
 
     private void add175ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add175ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4619,7 +4665,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add175ActionPerformed
 
     private void add165ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add165ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4640,7 +4686,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add165ActionPerformed
 
     private void add160ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add160ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4661,7 +4707,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add160ActionPerformed
 
     private void add140ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add140ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4682,7 +4728,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add140ActionPerformed
 
     private void add145ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add145ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4703,7 +4749,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add145ActionPerformed
 
     private void add125ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add125ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4724,12 +4770,12 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add125ActionPerformed
 
     private void add105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add105ActionPerformed
-            int selectedSizeIndex = size8.getSelectedIndex();
+            int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
         case 0: // "صغير"
-            itemid = 105; 
+            itemid = 61; 
             break;
         case 1: // "وسط"
             itemid = 106;  
@@ -4738,7 +4784,7 @@ public class recipes extends javax.swing.JFrame {
             itemid = 107;  
             break;
         default:
-            itemid = 105;  
+            itemid = 61;  
             break;
     }
 
@@ -4746,7 +4792,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_add105ActionPerformed
 
     private void add100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add100ActionPerformed
-    int selectedSizeIndex = size8.getSelectedIndex();
+    int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4769,7 +4815,7 @@ public class recipes extends javax.swing.JFrame {
     }//GEN-LAST:event_add100ActionPerformed
 
     private void add110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add110ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4790,7 +4836,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add110ActionPerformed
 
     private void add190ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add190ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4811,7 +4857,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add190ActionPerformed
 
     private void add115ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add115ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4832,7 +4878,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add115ActionPerformed
 
     private void add195ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add195ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4853,7 +4899,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add195ActionPerformed
 
     private void add185ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add185ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4874,7 +4920,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add185ActionPerformed
 
     private void add180ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add180ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4895,7 +4941,7 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add180ActionPerformed
 
     private void add130ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add130ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
@@ -4916,12 +4962,12 @@ public class recipes extends javax.swing.JFrame {
     item_add(itemid);    }//GEN-LAST:event_add130ActionPerformed
 
     private void add120ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add120ActionPerformed
-         int selectedSizeIndex = size8.getSelectedIndex();
+         int selectedSizeIndex = sizeAdd.getSelectedIndex();
 
     int itemid = 0;  
     switch (selectedSizeIndex) {
         case 0: // "صغير"
-            itemid = 120; 
+            itemid = 60; 
             break;
         case 1: // "وسط"
             itemid = 121;  
@@ -4930,7 +4976,7 @@ public class recipes extends javax.swing.JFrame {
             itemid = 122;  
             break;
         default:
-            itemid = 120;  
+            itemid = 60;  
             break;
     }
 
@@ -5208,9 +5254,9 @@ public class recipes extends javax.swing.JFrame {
     private javax.swing.JTextField quantity7;
     private javax.swing.JTextField quantity8;
     private javax.swing.JButton removerecipe;
-    private javax.swing.JComboBox<String> size7;
-    private javax.swing.JComboBox<String> size8;
-    private javax.swing.JComboBox<String> size9;
+    private javax.swing.JComboBox<String> sizeAdd;
+    private javax.swing.JComboBox<String> sizePasta;
+    private javax.swing.JComboBox<String> sizePizza;
     private javax.swing.JTextField sum;
     private javax.swing.JPanel sweet;
     private javax.swing.JButton sweet90;

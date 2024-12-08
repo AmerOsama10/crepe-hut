@@ -68,7 +68,7 @@
                       <Component id="jTabbedPane1" min="-2" pref="723" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="datapanel" pref="703" max="32767" attributes="0"/>
+                  <Component id="datapanel" pref="700" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1381,7 +1381,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#x628;&#x637;&#x627;&#x637;&#x633; &#x628;&#x648;&#x645; &#x641;&#x631;&#x64a;&#x62a;"/>
+                    <Property name="text" type="java.lang.String" value="&#x628;&#x637;&#x627;&#x637;&#x633; &#x641;&#x631;&#x633;&#x643;&#x633;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cheese60ActionPerformed"/>
@@ -2031,7 +2031,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="size7" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="sizePizza" min="-2" pref="132" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="labl4" min="-2" pref="74" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
@@ -2091,7 +2091,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="quantity7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="labl2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="size7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sizePizza" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labl4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="650" max="-2" attributes="0"/>
@@ -2477,7 +2477,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pizaa290ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="size7">
+                <Component class="javax.swing.JComboBox" name="sizePizza">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="1"/>
@@ -2491,6 +2491,7 @@
                     </Property>
                   </Properties>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="// Center-align the text in the combo box&#xa;sizePizza.setRenderer(new javax.swing.DefaultListCellRenderer() {&#xa;    @Override&#xa;    public java.awt.Component getListCellRendererComponent(&#xa;            javax.swing.JList&lt;?&gt; list, Object value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;        // Use the default rendering&#xa;        java.awt.Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);&#xa;        if (renderer instanceof javax.swing.JLabel) {&#xa;            // Center-align text&#xa;            ((javax.swing.JLabel) renderer).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);&#xa;        }&#xa;        return renderer;&#xa;    }&#xa;});"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
@@ -2583,7 +2584,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="size9" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="sizePasta" min="-2" pref="132" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="labl5" min="-2" pref="74" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -2625,7 +2626,7 @@
                                   <Component id="labl3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="size9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sizePasta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="labl5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -2717,6 +2718,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="&#x645;&#x643;&#x631;&#x648;&#x646;&#x647; &#x633;&#x64a; &#x641;&#x648;&#x62f;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pasta335ActionPerformed"/>
@@ -2733,7 +2735,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#x645;&#x643;&#x631;&#x648;&#x646;&#x647; &#x633;&#x64a; &#x641;&#x648;&#x62f;"/>
+                    <Property name="text" type="java.lang.String" value="&#x645;&#x643;&#x631;&#x648;&#x646;&#x647; &#x62c;&#x645;&#x628;&#x631;&#x64a;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pasta330ActionPerformed"/>
@@ -2750,7 +2752,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#x645;&#x643;&#x631;&#x648;&#x646;&#x647; &#x62c;&#x645;&#x628;&#x631;&#x64a;"/>
+                    <Property name="text" type="java.lang.String" value="&#x645;&#x643;&#x631;&#x648;&#x646;&#x647; &#x641;&#x631;&#x627;&#x62e;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pasta325ActionPerformed"/>
@@ -2806,7 +2808,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantity8ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="size9">
+                <Component class="javax.swing.JComboBox" name="sizePasta">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="1"/>
@@ -2820,6 +2822,7 @@
                     </Property>
                   </Properties>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="// Center-align the text in the combo box&#xa;sizePasta.setRenderer(new javax.swing.DefaultListCellRenderer() {&#xa;    @Override&#xa;    public java.awt.Component getListCellRendererComponent(&#xa;            javax.swing.JList&lt;?&gt; list, Object value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;        // Use the default rendering&#xa;        java.awt.Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);&#xa;        if (renderer instanceof javax.swing.JLabel) {&#xa;            // Center-align text&#xa;            ((javax.swing.JLabel) renderer).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);&#xa;        }&#xa;        return renderer;&#xa;    }&#xa;});"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
@@ -2929,7 +2932,7 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-                                  <Component id="size8" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <Component id="sizeAdd" min="-2" pref="132" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="label7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -2994,7 +2997,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="quantity5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="label5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="size8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sizeAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="label7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -3098,7 +3101,7 @@
                 <Component class="javax.swing.JButton" name="add155">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3115,7 +3118,7 @@
                 <Component class="javax.swing.JButton" name="add150">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3132,7 +3135,7 @@
                 <Component class="javax.swing.JButton" name="add170">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3149,7 +3152,7 @@
                 <Component class="javax.swing.JButton" name="add175">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3166,7 +3169,7 @@
                 <Component class="javax.swing.JButton" name="add165">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3183,7 +3186,7 @@
                 <Component class="javax.swing.JButton" name="add160">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3200,7 +3203,7 @@
                 <Component class="javax.swing.JButton" name="add140">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3217,7 +3220,7 @@
                 <Component class="javax.swing.JButton" name="add145">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3276,7 +3279,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#x643;&#x648;&#x644; &#x633;&#x644;&#x648;"/>
+                    <Property name="text" type="java.lang.String" value="&#x643;&#x648;&#x644;&#x633;&#x644;&#x648;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="add100ActionPerformed"/>
@@ -3293,7 +3296,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&#x628;&#x627;&#x643;&#x64a;&#x62a; &#x628;&#x637;&#x627;&#x637;&#x633; &#x643;&#x628;&#x64a;&#x631;"/>
+                    <Property name="text" type="java.lang.String" value="&#x645;&#x64a;&#x627;&#x647;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="add110ActionPerformed"/>
@@ -3373,7 +3376,7 @@
                 <Component class="javax.swing.JButton" name="add180">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="99" green="99" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -3421,7 +3424,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="add120ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="size8">
+                <Component class="javax.swing.JComboBox" name="sizeAdd">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="1"/>
@@ -3435,6 +3438,7 @@
                     </Property>
                   </Properties>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="// Center-align the text in the combo box&#xa;sizeAdd.setRenderer(new javax.swing.DefaultListCellRenderer() {&#xa;    @Override&#xa;    public java.awt.Component getListCellRendererComponent(&#xa;            javax.swing.JList&lt;?&gt; list, Object value, int index, boolean isSelected, boolean cellHasFocus) {&#xa;        // Use the default rendering&#xa;        java.awt.Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);&#xa;        if (renderer instanceof javax.swing.JLabel) {&#xa;            // Center-align text&#xa;            ((javax.swing.JLabel) renderer).setHorizontalAlignment(javax.swing.SwingConstants.CENTER);&#xa;        }&#xa;        return renderer;&#xa;    }&#xa;});"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>

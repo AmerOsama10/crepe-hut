@@ -395,8 +395,8 @@ public class Delivery extends javax.swing.JFrame {
         try{
         Connection connection= getConnection();   
         st=connection.createStatement();
-        st.executeQuery("SET NAMES UTF8");
-        st.executeQuery("SET CHARACTER SET UTF8");
+        
+        
         String query="SELECT * FROM `Clients` WHERE `Client_name`LIKE '%"+ValToSearch+"%'";
             rs=st.executeQuery(query);
             Client client;

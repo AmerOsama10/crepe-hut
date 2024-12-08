@@ -112,7 +112,6 @@ public class ItemsDetails extends javax.swing.JFrame {
         txtcost.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         additem.setBackground(new java.awt.Color(255, 51, 51));
-        additem.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         additem.setForeground(new java.awt.Color(255, 255, 255));
         additem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/additem.png"))); // NOI18N
         additem.setText("اضافه");
@@ -124,7 +123,6 @@ public class ItemsDetails extends javax.swing.JFrame {
         additem.setEnabled(false);
 
         updateclient.setBackground(new java.awt.Color(255, 51, 51));
-        updateclient.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         updateclient.setForeground(new java.awt.Color(255, 255, 255));
         updateclient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/update.png"))); // NOI18N
         updateclient.setText("تحديث");
@@ -134,7 +132,6 @@ public class ItemsDetails extends javax.swing.JFrame {
             }
         });
 
-        deleteclient.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         deleteclient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete.png"))); // NOI18N
         deleteclient.setText("حذف");
         deleteclient.setVisible(false);
@@ -172,6 +169,7 @@ public class ItemsDetails extends javax.swing.JFrame {
         Itemstable.setFocusable(false);
         Itemstable.setGridColor(new java.awt.Color(0, 153, 153));
         Itemstable.setRowMargin(3);
+        Itemstable.setRowHeight(30);
         Itemstable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ItemstableMouseClicked(evt);
@@ -184,7 +182,6 @@ public class ItemsDetails extends javax.swing.JFrame {
         }
 
         searchclient.setBackground(new java.awt.Color(255, 51, 51));
-        searchclient.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         searchclient.setForeground(new java.awt.Color(255, 255, 255));
         searchclient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
         searchclient.setText("بحث");
@@ -426,8 +423,6 @@ public class ItemsDetails extends javax.swing.JFrame {
         Connection connection= getConnection();   
         st=connection.createStatement();
         String query="SELECT * FROM `Items` WHERE `Item_name`LIKE '%"+ValToSearch+"%'";
-         st.executeQuery("SET NAMES 'UTF8'");
-         st.executeQuery("SET CHARACTER SET 'UTF8'");    
         rs=st.executeQuery(query);
             Items item;
             while(rs.next())
@@ -540,8 +535,6 @@ public class ItemsDetails extends javax.swing.JFrame {
         ResultSet rs;
         try{
             st=connection.createStatement();
-         st.executeQuery("SET NAMES 'UTF8'");
-         st.executeQuery("SET CHARACTER SET 'UTF8'");
             rs=st.executeQuery(query);
             Items item;
             while(rs.next())
@@ -614,8 +607,6 @@ public class ItemsDetails extends javax.swing.JFrame {
        Statement st;
        try{
            st = con.createStatement();
-            st.executeQuery("SET NAMES 'UTF8'");
-         st.executeQuery("SET CHARACTER SET 'UTF8'");
            if((st.executeUpdate(query)) == 1)
            {
             
