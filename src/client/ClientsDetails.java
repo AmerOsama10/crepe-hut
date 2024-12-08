@@ -7,20 +7,15 @@ package client;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import cashier.CashMain;
 import java.awt.Color;
 import java.awt.Font;
-import java.io.UnsupportedEncodingException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -91,7 +86,7 @@ public class ClientsDetails extends javax.swing.JFrame {
         jLabel1.setText("بيانات العملاء  ");
         jLabel1.setOpaque(true);
 
-        name.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        name.setFont(new java.awt.Font("Tahoma", Font.BOLD, 16)); // NOI18N
         name.setForeground(new java.awt.Color(255, 0, 102));
         name.setText("الاسم");
 
@@ -514,7 +509,7 @@ public class ClientsDetails extends javax.swing.JFrame {
     {
         Connection con;
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost:3306/crepehut","root","");
             return con;
         } catch(Exception e)

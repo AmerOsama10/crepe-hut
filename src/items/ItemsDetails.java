@@ -523,7 +523,7 @@ public class ItemsDetails extends javax.swing.JFrame {
     {
         Connection con;
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost:3306/crepehut","root","");
             return con;
         } catch(Exception e)

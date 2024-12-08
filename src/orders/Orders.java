@@ -10,18 +10,21 @@ package orders;
  * @author Amer Osama
  */
 public class Orders {
-    private int id,quantity;
+    private int id;
+    private final int quantity;
     private int cashier_id,client_id,item_id;
-    public Orders(int cashier_id,int client_id,int item_id)
+    public Orders(int quantity, int cashier_id, int client_id, int item_id)
     {
+        this.quantity = quantity;
         this.cashier_id=cashier_id;
         this.client_id=client_id;
         this.item_id=item_id;
     }
     
-       public Orders(int order_id)
+       public Orders(int order_id, int quantity)
     {
         id=order_id;
+        this.quantity = quantity;
     }
     
 

@@ -5,12 +5,18 @@
             <url>src/orders/recipes.java</url>
             <bookmark id="1">
                 <name/>
-                <line>3738</line>
+                <line>5186</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/admin/CheckContinue.java</file>
+            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/orders/recipes.java</file>
+            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/cashier/CashMain.java</file>
+            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/orders/FindIemsDetails.java</file>
+            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/admin/EnterSystem.java</file>
+        </group>
     </open-files>
 </project-private>
