@@ -1938,7 +1938,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add155.setBackground(new java.awt.Color(255, 153, 153));
+        add155.setBackground(new java.awt.Color(255, 51, 51));
         add155.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add155.setForeground(new java.awt.Color(255, 255, 255));
         add155.setText("اضافه لحم مفروم");
@@ -1948,7 +1948,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add150.setBackground(new java.awt.Color(255, 153, 153));
+        add150.setBackground(new java.awt.Color(255, 51, 51));
         add150.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add150.setForeground(new java.awt.Color(255, 255, 255));
         add150.setText("اضافه سجق");
@@ -1958,7 +1958,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add170.setBackground(new java.awt.Color(255, 153, 153));
+        add170.setBackground(new java.awt.Color(255, 51, 51));
         add170.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add170.setForeground(new java.awt.Color(255, 255, 255));
         add170.setText("اضافه رومي");
@@ -1968,7 +1968,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add175.setBackground(new java.awt.Color(255, 153, 153));
+        add175.setBackground(new java.awt.Color(255, 51, 51));
         add175.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add175.setForeground(new java.awt.Color(255, 255, 255));
         add175.setText("اضافه كيري");
@@ -1978,7 +1978,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add165.setBackground(new java.awt.Color(255, 153, 153));
+        add165.setBackground(new java.awt.Color(255, 51, 51));
         add165.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add165.setForeground(new java.awt.Color(255, 255, 255));
         add165.setText("اضافه موتزريلا");
@@ -1988,7 +1988,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add160.setBackground(new java.awt.Color(255, 153, 153));
+        add160.setBackground(new java.awt.Color(255, 51, 51));
         add160.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add160.setForeground(new java.awt.Color(255, 255, 255));
         add160.setText("اضافه فراخ");
@@ -1998,7 +1998,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add140.setBackground(new java.awt.Color(255, 153, 153));
+        add140.setBackground(new java.awt.Color(255, 51, 51));
         add140.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add140.setForeground(new java.awt.Color(255, 255, 255));
         add140.setText("اضافه بسطرمه");
@@ -2008,7 +2008,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add145.setBackground(new java.awt.Color(255, 153, 153));
+        add145.setBackground(new java.awt.Color(255, 51, 51));
         add145.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add145.setForeground(new java.awt.Color(255, 255, 255));
         add145.setText("اضافه سوسيس");
@@ -2099,7 +2099,7 @@ public class recipes extends javax.swing.JFrame {
             }
         });
 
-        add180.setBackground(new java.awt.Color(255, 153, 153));
+        add180.setBackground(new java.awt.Color(255, 51, 51));
         add180.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add180.setForeground(new java.awt.Color(255, 255, 255));
         add180.setText("اضافه شيدر");
@@ -2769,7 +2769,7 @@ public class recipes extends javax.swing.JFrame {
                         .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 723, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(datapanel, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
+                .addComponent(datapanel, javax.swing.GroupLayout.DEFAULT_SIZE, 703, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

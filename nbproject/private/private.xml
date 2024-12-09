@@ -5,23 +5,19 @@
             <url>src/orders/recipes.java</url>
             <bookmark id="1">
                 <name/>
-                <line>5269</line>
+                <line>3913</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/admin/CheckContinue.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/orders/recipes.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/cashier/CashMain.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/orders/FindIemsDetails.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/admin/EnterSystem.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/orders/Delivery.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/client/ClientsDetails.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/orders/Orders.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/items/ItemsDetails.java</file>
-            <file>file:/C:/amer/Crepe-Hut-6.0/crepe-hut/src/orders/backtoorder.java</file>
+            <file>file:/E:/Store/workspace/netbeans/Z-crepe-main/src/admin/AdminMain.java</file>
+            <file>file:/E:/Store/workspace/netbeans/Z-crepe-main/src/admin/CheckContinue.java</file>
+            <file>file:/E:/Store/workspace/netbeans/Z-crepe-main/src/admin/AdminLogin.java</file>
+            <file>file:/E:/Store/workspace/netbeans/Z-crepe-main/src/admin/InvoicesDetails.java</file>
+            <file>file:/E:/Store/workspace/netbeans/Z-crepe-main/src/admin/EnterSystem.java</file>
+            <file>file:/E:/Store/workspace/netbeans/Z-crepe-main/src/admin/correct.png</file>
         </group>
     </open-files>
 </project-private>
